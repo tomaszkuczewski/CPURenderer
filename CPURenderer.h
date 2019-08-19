@@ -230,8 +230,7 @@ inline void CPURenderer::Draw(Mesh* mesh)
 
 	Vec4 vertex[6]; //Preallocated vertices
 	Vec3 vertexClipped[24]; //Vertices clipped by view planes
-	Vec3 vertexColor;
-	Vec3 vertexNormall;
+	Vec3 vertexColor{};
 
 	//Nera plane clip plane to remove artifacts
 	int nearPlanceClippedCount = 0;
