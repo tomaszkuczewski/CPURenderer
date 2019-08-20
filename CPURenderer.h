@@ -272,7 +272,7 @@ inline void CPURenderer::Draw(Mesh* mesh)
 		}
 
 		//ONLY FOR FLAT COLOR
-		//Handle lighting and sience is flat color lighting
+		//Handle lighting and since is flat color lighting
 		if (_mIsLightSet)
 		{
 			//Aka Pixel/Fragment shader
@@ -319,10 +319,10 @@ inline void CPURenderer::Draw(Mesh* mesh)
 			vertex[idx0] *= *_mLocalProjection; vertex[idx1] *= *_mLocalProjection; vertex[idx2] *= *_mLocalProjection;
 
 			//To NDC
-			vertex[idx0] /= vertex[idx0].w;		vertex[idx1] /= vertex[idx1].w;					vertex[idx2] /= vertex[idx2].w; //Divide by w
+			vertex[idx0] /= vertex[idx0].w; vertex[idx1] /= vertex[idx1].w;	vertex[idx2] /= vertex[idx2].w; //Divide by w
 
-			vertex[idx0].x += 1.0f;				vertex[idx0].x *= 0.5f;		vertex[idx0].y += 1.0f;		vertex[idx0].y *= 0.5f;
-			vertex[idx0].x *= GetWidthf();		vertex[idx0].y *= GetHeightf();
+			vertex[idx0].x += 1.0f;			vertex[idx0].x *= 0.5f;	vertex[idx0].y += 1.0f;	vertex[idx0].y *= 0.5f;
+			vertex[idx0].x *= GetWidthf();	vertex[idx0].y *= GetHeightf();
 
 			vertex[idx1].x += 1.0f;			vertex[idx1].x *= 0.5f;	vertex[idx1].y += 1.0f;	vertex[idx1].y *= 0.5f;
 			vertex[idx1].x *= GetWidthf();	vertex[idx1].y *= GetHeightf();
